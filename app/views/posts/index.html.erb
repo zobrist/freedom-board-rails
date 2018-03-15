@@ -44,7 +44,7 @@
             <span class="text-primary">Board</span>
           </h1>
           <div class="subheading mb-5">Express your thoughts</div>          
-          <% @posts.reverse_each do |post| %>
+          <% @posts.each do |post| %>
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">              
               <h3 class="mb-0"><%= post.user %></h3>
