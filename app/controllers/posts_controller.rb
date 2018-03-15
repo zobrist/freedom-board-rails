@@ -8,7 +8,8 @@ class PostsController < ApplicationController
   end
 
   def show
-      @post = Post.find(params[:id])
+    @posts = Post.where("user like ? OR message like ?", "%#{params[:keyword]}%", "%#{params[:keyword]}%") 
+    render '/posts/index'
   end
 
   def create
@@ -17,10 +18,11 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.time = d
     @post.save
-    redirect_to @post
+    index
+    render '/posts/index'    
   end
 
   private def post_params
-    params.require(:post).permit(:user, :message);
+    params.permit(:user, :message);
   end
 end
