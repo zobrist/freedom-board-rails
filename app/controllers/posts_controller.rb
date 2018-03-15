@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.limit(5)
   end
 
   def new
@@ -17,7 +17,11 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.time = d
     @post.save
-    redirect_to @post
+    redirect_to posts_path
+  end
+
+  def all_posts
+    @posts = Post.all
   end
 
   private def post_params

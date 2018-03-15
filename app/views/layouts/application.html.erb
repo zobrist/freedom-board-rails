@@ -13,11 +13,11 @@
   <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Freedom Board</a>
+      <a class="navbar-brand" href="/">Freedom Board</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">All Posts</a></li>
+      <li><%= link_to "Home", posts_path %></li>
+      <li><a href="/all_posts">All Posts</a></li>
       <li><%= link_to "New Post", new_post_path %></li>
     </ul>
   </div>
