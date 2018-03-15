@@ -1,10 +1,11 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.limit(5).order('id desc')
+
   end
 
   def new
-
+    @post = Post.new
   end
 
   def show
@@ -16,6 +17,11 @@ class PostsController < ApplicationController
     d = DateTime.now
     d = d.strftime("%m/%d/%Y %H:%M")
     @post = Post.new(post_params)
+
+    if(@post.user == "")
+      @post.user = "Anonymous"
+    end
+
     @post.time = d
     @post.save
     index

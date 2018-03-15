@@ -1,0 +1,29 @@
+<div class = "container">
+  <h2 align = "center">All Posts</h2>
+  <div class="form-group">
+    <% if Post.any? %>
+      <table align = "center" border="1px solid-black" style="width:50%;" cellpadding="10">
+       <tr>
+         <td>
+            <% @posts.reverse_each do |post| %>
+            <table align = "center" frame="below" border="1px solid-black;" style="border-collapse: collapse;" cellpadding="20">
+                <tr>
+                  <th style="width: 10%; border: none;" align="left">
+                    <p style="padding-left: 10px; padding-top: 10px;"><%= post.time %></p></th>
+                  <th style="width: 10%; border: none;" align="right">
+                    <p style="padding-right: 10px; padding-top: 10px;"><%= post.user %></p></th>
+                </tr>
+              <tr>
+                <td colspan="2" style="padding: 20px; padding-top: 3px; border: none;" align="left">
+                  <p><%= post.message %> </p>
+              </tr>
+          </table>
+          <% end %>
+        </td>
+        </tr>
+      </table>
+    <% else %>
+      <h5 align = "center">No posts yet...</h5>
+    <% end %>
+  </div>
+</div>
