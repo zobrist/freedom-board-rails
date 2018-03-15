@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.limit(5)
+    @posts = Post.limit(5).order('id desc')
+
   end
 
   def new
@@ -22,6 +23,7 @@ class PostsController < ApplicationController
 
   def all_posts
     @posts = Post.all
+
   end
 
   private def post_params

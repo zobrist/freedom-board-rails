@@ -1,11 +1,11 @@
 <div class = "container">
-  <h1 align = "center">All Posts</h1>
+  <h2 align = "center">All Posts</h2>
   <div class="form-group">
     <% if Post.any? %>
       <table align = "center" border="1px solid-black" style="width:50%;" cellpadding="10">
        <tr>
          <td>
-            <% @posts.each do |post| %>
+            <% @posts.reverse_each do |post| %>
             <table align = "center" frame="below" border="1px solid-black;" style="border-collapse: collapse;" cellpadding="20">
                 <tr>
                   <th style="width: 10%; border: none;" align="left">
