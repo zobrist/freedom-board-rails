@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @posts = Post.where("user like ? OR message like ?", '%' + params[:keyword] + '%', '%' + params[:keyword] + '%') 
+    @posts = Post.where("user like ? AND message like ?", '%' + params[:keyword] + '%', '%' + params[:keyword] + '%') 
     render '/posts/index'
   end
 
