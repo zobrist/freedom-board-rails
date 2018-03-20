@@ -3,20 +3,20 @@
 
   <div class="row">
     <div class="col-md-5">  
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav" style="width: 33%">                
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav" style="min-width: 450px">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">          
           <ul class="navbar-nav">
           <br><br><br>
           <li class="nav-item">
-            <form class="navbar-form navbar-left" action="/posts/create" method="post">
+            <form class="navbar-form navbar-left fixed-left" action="/posts/create" method="post">
               <input name="authenticity_token" type="hidden" value="x37DrAAwyIIb7s+w2+AdoCR8cAJIpQhIetKRrPgG5VA=">
               <br><br>
               <div class="form-group" align="left">
-                <textarea class="form-control" rows="7" style="width: 350px" name="message" placeholder="Express your thoughts..."></textarea>
+                <textarea class="form-control" rows="7" style="min-width: 330px" name="message" placeholder="Express your thoughts..."></textarea>
               </div>
               <br><br>
               <div class="form-group form-inline">
-                <input type="text" style="width: 200px" class="form-control" name="user" placeholder="Anonymous">&nbsp&nbsp&nbsp
+                <input type="text" style="min-width: 200px" class="form-control" name="user" placeholder="Anonymous">&nbsp&nbsp&nbsp
                 <button type="submit" class="btn btn-primary">Ipahayag!</button>
               </div>  
               </form> 

@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @posts = Post.where("concat_ws(' ', user, message) ILIKE ?", '%' + params[:keyword] + '%') 
+    @posts = Post.where("concat_ws(' ', user, message) LIKE ?", '%' + params[:keyword] + '%') 
     render '/posts/index'
   end
 
