@@ -8,16 +8,17 @@
           <ul class="navbar-nav">
           <br><br><br>
           <li class="nav-item">
+
             <form class="navbar-form navbar-left fixed-left" action="/posts/create" method="post">
               <input name="authenticity_token" type="hidden" value="x37DrAAwyIIb7s+w2+AdoCR8cAJIpQhIetKRrPgG5VA=">
               <br><br>
               <div class="form-group" align="left">
-                <textarea class="form-control" rows="7" style="min-width: 330px" name="message" placeholder="Express your thoughts..."></textarea>
+                <textarea class="form-control message" rows="7" style="min-width: 330px" name="message" id="message" placeholder="Express your thoughts..."></textarea>
               </div>
               <br><br>
               <div class="form-group form-inline">
-                <input type="text" style="min-width: 200px" class="form-control" name="user" placeholder="Anonymous">&nbsp&nbsp&nbsp
-                <button type="submit" class="btn btn-primary">Ipahayag!</button>
+                <input type="text" style="min-width: 200px" class="form-control" name="user" id="user" placeholder="Anonymous">&nbsp&nbsp&nbsp
+                <button type="submit" class="btn btn-primary" value="Ipahayag!"></button>
               </div>  
               </form> 
           </li>
@@ -26,7 +27,7 @@
             <form class="navbar-form navbar-center" action="/posts/search" method="get">
               <div class="form-group form-inline">
                 <input type="text" class="form-control" placeholder="Search" name="keyword">&nbsp&nbsp&nbsp
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" value="Submit"></button>
               </div>
             </form> 
           </li>
